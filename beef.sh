@@ -1,5 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
+cd $HOME
+
 clear
 
 echo "Dependencies installation..."
