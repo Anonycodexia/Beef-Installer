@@ -17,25 +17,31 @@ source <(curl -sL https://github.com/termux/termux-packages/files/2912002/fix-ru
 cd $PREFIX/opt
 git clone https://github.com/beefproject/beef --depth=1
 
-cd /data/data/com.termux/files/home/beef
+cd $HOME/beef
 
-sed -i 's/sudo//g' /data/data/com.termux/files/home/beef/install
+sed -i 's/sudo//g' $HOME/beef/install
 
-sed -i '274 s/check_os//g' /data/data/com.termux/files/home/beef/install
+sed -i '274 s/check_os//g' $HOME/beef/install
 
-sed -i '275 s/check_ruby_version//g' /data/data/com.termux/files/home/beef/install
+sed -i '275 s/check_ruby_version//g' $HOME/beef/install
 
 echo "Set the Password"
 
 read -p "Enter the new username: " username
 
-sed -i "20 s/\bbeef\b/$username/g" /data/data/com.termux/files/home/beef/config.yaml
+sed -i "20 s/\bbeef\b/$username/g" $HOME/beef/config.yaml
 
 read -p "Enter the new password: " password
 
-sed -i "21 s/\bbeef\b/$password/g" /data/data/com.termux/files/home/beef/config.yaml
+sed -i "21 s/\bbeef\b/$password/g" $HOME/beef/config.yaml
 
 echo "Your Username & Password Successfully changed"
 bash install
 
+rm -rf $HOME/Beef-Installer
+
 echo "INSTALLATION COMPLETED..."
+
+echo "Please Restart Your Terminal"
+
+echo "Please Subscribe to Youtube Channel Cybereveal"
