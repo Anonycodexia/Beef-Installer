@@ -23,6 +23,6 @@ After installation Restart your Terminal
 
 cd beef
 
-./bash
+./beef
 
 Happy Hacking 😄
