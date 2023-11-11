@@ -3,7 +3,6 @@
 cd $HOME
 
 clear
-mkdir $PREFIX/opt
 echo "Dependencies installation..."
 
 rm $PREFIX/etc/apt/sources.list.d/*
@@ -15,7 +14,7 @@ gem install nokogiri -- --use-system-libraries
 python3 -m pip install requests
 
 source <(curl -sL https://github.com/termux/termux-packages/files/2912002/fix-ruby-bigdecimal.sh.txt)
-
+mkdir -p $PREFIX/opt
 cd $PREFIX/opt
 git clone https://github.com/beefproject/beef --depth=1
 
