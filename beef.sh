@@ -3,7 +3,7 @@
 cd $HOME
 
 clear
-
+mkdir $PREFIX/opt
 echo "Dependencies installation..."
 
 rm $PREFIX/etc/apt/sources.list.d/*
