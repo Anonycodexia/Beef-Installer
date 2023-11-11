@@ -21,7 +21,7 @@ Now, wait and have coffee ☕
 
 After installation Restart your Terminal
 
-cd beef
+cd $PREFIX/opt/beef
 
 ./beef
 
